@@ -1,0 +1,8 @@
+---
+- name: webserver content config
+  hosts: dev
+  tasks:
+    - name: change the webserver content
+      ansible.builtin.copy:
+        src: index.j2
+        dest: /var/www/html/index.html
