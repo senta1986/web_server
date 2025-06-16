@@ -6,11 +6,10 @@
       ansible.builtin.copy:
         src: index.j2
         dest: /var/www/html/index.html
-      notify:
-        restart_service
+      notify: restart the httpd
   handlers:
-    - name: restart_service
+    - name: restart the httpd
       ansible.builtin.service:
-        name: httpd
-        state: restarted
-        enabled: yes
+        service: httpd
+        state: restarted 
+
