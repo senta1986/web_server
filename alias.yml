@@ -10,6 +10,5 @@
   handlers:
     - name: restart the httpd
       ansible.builtin.service:
-        service: httpd
-        state: restarted 
-
+        name: httpd
+        state: restarted
